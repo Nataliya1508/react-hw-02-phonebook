@@ -60,14 +60,15 @@ export default class App extends Component {
           onAddContact={this.handleAddContact}
           onCheck={this.handleCheckValue}
         />
-
+{/* <Filter filter={filter} onChange={this.handleFilterChange} /> */}
         {/* <Filter filter={filter} onChange={this.handleFilterChange} /> */}
         <ContactList
           contacts={normalizeContacts}
           onRemove={this.handleremoveContact}
         >
-          <Filter filter={filter} onChange={this.handleFilterChange} />
-        </ContactList>
+         <Filter filter={filter} onChange={this.handleFilterChange} /> 
+          </ContactList>
+          
       </>
     );
   }

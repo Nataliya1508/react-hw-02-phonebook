@@ -1,7 +1,6 @@
 import { React } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactList.module.css';
-// import {ContactItem} from './ContactItem/ContactItem';
 
  export const ContactList = ({ contacts, onRemove, children }) => {
   return (
@@ -27,7 +26,7 @@ import styles from './ContactList.module.css';
                   </button>
                 </li>
               );
-            })}
+      })}
           </>
         )}
       </ul>

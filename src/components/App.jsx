@@ -34,7 +34,7 @@ export default class App extends Component {
       contacts: contacts.filter(contact => contact.id !== id),
     }));
 
-  handleFilterChange = filter => this.setState({ filter });
+  // handleFilterChange = filter => this.setState({ filter });
 
   handleFilterChange = (e) => {
     const { name, value } = e.target;

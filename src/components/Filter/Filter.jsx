@@ -8,7 +8,7 @@ import { nanoid } from 'nanoid';
   const filterId = nanoid();
   return (<div>
     <label htmlFor={filterId}>Find contacts by name</label>
-    <input className={styles.filter} id={filterId} type="text" name="filter" value={value} onChange={onChange} placeholder='Input name'/>
+    <input className={styles.filter} id={filterId} type="text" name="filter" value={value} onChange={onChange} placeholder='Enter name'/>
   </div>);
 };
 

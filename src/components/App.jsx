@@ -34,7 +34,6 @@ export default class App extends Component {
       contacts: contacts.filter(contact => contact.id !== id),
     }));
 
-  // handleFilterChange = filter => this.setState({ filter });
 
   handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -60,8 +59,7 @@ export default class App extends Component {
           onAddContact={this.handleAddContact}
           onCheck={this.handleCheckValue}
         />
-{/* <Filter filter={filter} onChange={this.handleFilterChange} /> */}
-        {/* <Filter filter={filter} onChange={this.handleFilterChange} /> */}
+
         <ContactList
           contacts={normalizeContacts}
           onRemove={this.handleremoveContact}

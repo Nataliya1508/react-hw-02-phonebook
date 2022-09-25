@@ -32,7 +32,7 @@ export default class ContactForm extends Component {
         const isValidatedForm = this.validateForm()
 
         if (!isValidatedForm) return
-        onAddContact({ name, number })
+        onAddContact({ id: nanoid(), name, number })
         
         this.setState({
             name: '',
@@ -96,7 +96,8 @@ export default class ContactForm extends Component {
 }
 
 ContactForm.propTypes = {
-  onAddContact: PropTypes.func.isRequired,
+    onAddContact: PropTypes.func.isRequired,
+    onCheck: PropTypes.string.isRequired,
 };
 
  

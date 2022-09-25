@@ -2,11 +2,10 @@ import { React } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactList.module.css';
 
- export const ContactList = ({ contacts, onRemove, children }) => {
+ export const ContactList = ({ contacts, onRemove}) => {
   return (
     <div className={styles.contacts}>
       <h2>Contacts</h2>
-      {children}
       <ul>
         {contacts.length === 0 ? false : (
           <>
@@ -35,6 +34,6 @@ import styles from './ContactList.module.css';
 };
 
 ContactList.propTypes = {
-    contacts: PropTypes.number.isRequired,
+    contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
     onRemove: PropTypes.func.isRequired,
 }

@@ -16,18 +16,20 @@ export default class App extends Component {
   };
 
   handleAddContact = newContact =>
+  
     this.setState(({ contacts }) => ({
       contacts: [...contacts, newContact],
     }));
 
-  handleCheckValue = name => {
+  handleCheckValue = (name) => {
     const { contacts } = this.state;
-    const result = !!contacts.find(contact => contact.name === name);
+    const result = !!contacts.find(contact => contact.name.toLocaleLowerCase() === name.toLocaleLowerCase());
 
     result && alert(`${name} is already in contacts`);
 
     return !result;
   };
+
 
   handleremoveContact = id =>
     this.setState(({ contacts }) => ({
